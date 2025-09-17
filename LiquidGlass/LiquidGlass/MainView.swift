@@ -92,6 +92,7 @@ struct MainView: View {
                         .controlSize(.large)
                         .buttonStyle(.glass)
                     }
+
                     // No transparency, but responds like liquid glass
                     HStack(spacing: 24) {
                         Button {  } label: {
@@ -99,6 +100,15 @@ struct MainView: View {
                         }
                         .buttonStyle(.glassProminent)
                         .tint(.orange)
+
+                        Button { } label: {
+                            Image(systemName: "heart.fill")
+                                .frame(width: 44, height: 44)
+                        }
+                        .buttonStyle(.glassProminent)
+                        .buttonBorderShape(.circle)
+                        .tint(.red)
+                        .clipShape(Circle())
 
                         Button {  } label: {
                             Text("Press me")
